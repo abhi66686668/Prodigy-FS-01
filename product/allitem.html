@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skanda Fruits - Our Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Add some basic styling for the notification */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: none;
+        }
+        
+        /* Section heading styles */
+        .section-heading {
+            font-size: 28px;
+            margin: 40px 0 20px;
+            color: #2a7f62;
+            text-align: center;
+            width: 100%;
+            grid-column: 1 / -1;
+        }
+        
+        
+    
+    </style>
+</head>
+<body>
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="headnav">
+            <div class="brand-name">Skanda Fruits</div>
+            <div class="tagline">Fresh Fruits & Vegetables Delivered to Your Doorstep</div>
+            <nav>
+                <a href="\index.html">Home</a>
+                <a href="allitem.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="\cart.html" class="cart-link">Cart (0)</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="products-page">
+        <h1>Our Organic Products</h1>
+        
+        <div class="category-filter">
+            <h2>All Products</h2>
+            <div class="filter-options">
+                <button  class="filter-btn active">All</button>
+                <a href="veg.html"><button class="filter-btn">Vegetables</button></a>
+                <button class="filter-btn">Fruits</button>
+                 <a href="dairy.html"><button class="filter-btn">Dairy</button></a>
+                
+            </div>
+        </div>
+        <h2 class="section-heading">Fresh Fruites</h2>
+        <div class="products-grid four-column">
+            <!-- Product Cards (same as before) -->
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <img src="images/friutes/applegava.jpg" alt="Apple Guava">
+                <h3>Apple Guava</h3>
+                <p class="product-desc">Sweet and fragrant guava with pink flesh, rich in vitamin C.</p>
+                <div class="product-price">₹120 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <img src="images/friutes/indianapple.jpg" alt="Shimla Apple">
+                <h3>Shimla Apple</h3>
+                <p class="product-desc">Crisp and juicy Himalayan apples, grown in organic orchards.</p>
+                <div class="product-price">₹180 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <img src="images/friutes/orang.jpg" alt="Nagpur Orange">
+                <h3>Nagpur Orange</h3>
+                <p class="product-desc">Juicy and sweet oranges from Nagpur, packed with vitamin C.</p>
+                <div class="product-price">₹80 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <img src="images/friutes/graps.jpg" alt="Kinnow Mandarin">
+                <h3>Kinnow Mandarin</h3>
+                <p class="product-desc">Sweet and seedless mandarins from Punjab's finest farms.</p>
+                <div class="product-price">₹90 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="product-card">
+                <img src="images/friutes/grapesbox.jpg" alt="Thompson Grapes">
+                <h3>Thompson Grapes</h3>
+                <p class="product-desc">Seedless green grapes with perfect sweetness and crunch.</p>
+                <div class="product-price">₹150 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="product-card">
+                <img src="images/friutes/banana.jpg" alt="Robusta Banana">
+                <h3>Robusta Banana</h3>
+                <p class="product-desc">Naturally ripened bananas, rich in potassium and energy.</p>
+                <div class="product-price">₹50 / dozen</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 7 -->
+            <div class="product-card">
+                <img src="images/friutes/kiwi.jpg" alt="Kiwi Fruit">
+                <h3>Zirakpur Kiwi</h3>
+                <p class="product-desc">Fresh kiwis from Himachal with perfect tart-sweet balance.</p>
+                <div class="product-price">₹200 / dozen</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 8 -->
+            <div class="product-card">
+                <img src="images/" alt="Maharashtra Strawberries">
+                <h3>Maharashtra Strawberries</h3>
+                <p class="product-desc">Sweet and juicy strawberries from Mahabaleshwar farms.</p>
+                <div class="product-price">₹250 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 9 -->
+            <div class="product-card">
+                <img src="images/friutes/watermelon.jpg" alt="Sugar Baby Watermelon">
+                <h3>Sugar Baby Watermelon</h3>
+                <p class="product-desc">Sweet, seedless mini watermelons perfect for Indian summers.</p>
+                <div class="product-price">₹40 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 10 -->
+            <div class="product-card">
+                <img src="images/friutes/Alphonso Mango.jpg" alt="Alphonso Mango">
+                <h3>Alphonso Mango</h3>
+                <p class="product-desc">The king of fruits from Ratnagiri, sweet and fiberless.</p>
+                <div class="product-price">₹600 / dozen</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 11 -->
+            <div class="product-card">
+                <img src="images/friutes/pomo.jpg" alt="Bhagwa Pomegranate">
+                <h3>Bhagwa Pomegranate</h3>
+                <p class="product-desc">Deep red, juicy arils from Maharashtra's finest orchards.</p>
+                <div class="product-price">₹140 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 12 -->
+            <div class="product-card">
+                <img src="images/friutes/Kew Pineapple.jpg" alt="Kew Pineapple">
+                <h3>Kew Pineapple</h3>
+                <p class="product-desc">Sweet and tangy pineapples from Northeast India.</p>
+                <div class="product-price">₹70 / piece</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <h2 class="section-heading">Fresh Vegetables</h2>
+            
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <img src="images/veg/tomato.jpg" alt="Organic Tomatoes">
+                <h3>Organic Tomatoes</h3>
+                <p class="product-desc">Juicy, vine-ripened tomatoes grown without synthetic pesticides.</p>
+                <div class="product-price">₹60 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+            
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <img src="images/veg/potato.jpg" alt="Fresh Potatoes">
+                <h3>Fresh Potatoes</h3>
+                <p class="product-desc">Nutrient-rich potatoes perfect for all your cooking needs.</p>
+                <div class="product-price">₹40 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <img src="images/veg/onion.jpg" alt="Red Onions">
+                <h3>Red Onions</h3>
+                <p class="product-desc">Pungent and flavorful onions with deep red skin.</p>
+                <div class="product-price">₹50 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <img src="images/veg/carrot.jpg" alt="Fresh Carrots">
+                <h3>Fresh Carrots</h3>
+                <p class="product-desc">Sweet and crunchy carrots packed with beta-carotene.</p>
+                <div class="product-price">₹70 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="product-card">
+                <img src="images/veg/cabbage.jpg" alt="Green Cabbage">
+                <h3>Green Cabbage</h3>
+                <p class="product-desc">Crisp and fresh cabbage for salads and stir-fries.</p>
+                <div class="product-price">₹45 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="product-card">
+                <img src="images/veg/cauliflower.jpg" alt="Cauliflower">
+                <h3>Cauliflower</h3>
+                <p class="product-desc">Fresh white cauliflower heads, perfect for curries and roasting.</p>
+                <div class="product-price">₹65 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 7 -->
+            <div class="product-card">
+                <img src="images/veg/brinjal.jpg" alt="Brinjal">
+                <h3>Purple Brinjal</h3>
+                <p class="product-desc">Shiny purple eggplants for baingan bharta and curries.</p>
+                <div class="product-price">₹55 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 8 -->
+            <div class="product-card">
+                <img src="images/veg/capsicum.jpg" alt="Capsicum">
+                <h3>Colored Capsicum</h3>
+                <p class="product-desc">Sweet bell peppers in red, yellow and green varieties.</p>
+                <div class="product-price">₹120 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 9 -->
+            <div class="product-card">
+                <img src="images/veg/beans.jpg" alt="French Beans">
+                <h3>French Beans</h3>
+                <p class="product-desc">Tender green beans with excellent crunch and flavor.</p>
+                <div class="product-price">₹90 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 10 -->
+            <div class="product-card">
+                <img src="images/veg/bittergourd.jpg" alt="Bitter Gourd">
+                <h3>Bitter Gourd</h3>
+                <p class="product-desc">Nutrient-dense bitter gourd for traditional Indian dishes.</p>
+                <div class="product-price">₹75 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 11 -->
+            <div class="product-card">
+                <img src="images/veg/ladyfinger.jpg" alt="Ladyfinger">
+                <h3>Ladyfinger</h3>
+                <p class="product-desc">Fresh okra perfect for bhindi masala and stir-fries.</p>
+                <div class="product-price">₹80 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 12 -->
+            <div class="product-card">
+                <img src="images/veg/pumpkin.jpg" alt="Pumpkin">
+                <h3>Pumpkin</h3>
+                <p class="product-desc">Sweet pumpkin for curries, soups and desserts.</p>
+                <div class="product-price">₹35 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 13 -->
+            <div class="product-card">
+                <img src="images/veg/spinach.jpg" alt="Spinach">
+                <h3>Fresh Spinach</h3>
+                <p class="product-desc">Tender green leaves packed with iron and nutrients.</p>
+                <div class="product-price">₹40 / bunch</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 14 -->
+            <div class="product-card">
+                <img src="images/veg/cucumber.jpg" alt="Cucumber">
+                <h3>Cucumber</h3>
+                <p class="product-desc">Cooling and hydrating cucumbers for salads and raita.</p>
+                <div class="product-price">₹30 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 15 -->
+            <div class="product-card">
+                <img src="images/veg/radish.jpg" alt="Radish">
+                <h3>White Radish</h3>
+                <p class="product-desc">Crunchy radish with a peppery flavor for salads.</p>
+                <div class="product-price">₹45 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+            
+            <!-- Product Card 16 -->
+            <div class="product-card">
+                <img src="images/veg/garlic.jpg" alt="Garlic">
+                <h3>Fresh Garlic</h3>
+                <p class="product-desc">Aromatic garlic bulbs for flavoring your dishes.</p>
+                <div class="product-price">₹150 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <h2 class="section-heading">Grocery Essentials</h2>
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <img src="images/grocery/basmati-rice.png" alt="Basmati Rice">
+                <h3>Premium Basmati Rice</h3>
+                <p class="product-desc">Long grain aromatic basmati rice, perfect for biryanis and pulao.</p>
+                <div class="product-price">₹120 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <img src="images/grocery/atta.png" alt="Whole Wheat Atta">
+                <h3>Whole Wheat Atta</h3>
+                <p class="product-desc">100% whole wheat flour for healthy chapatis and parathas.</p>
+                <div class="product-price">₹45 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <img src="images/grocery/toor-dal.png" alt="Toor Dal">
+                <h3>Toor Dal</h3>
+                <p class="product-desc">High protein split pigeon peas, essential for Indian cooking.</p>
+                <div class="product-price">₹130 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <img src="images/grocery/sugar.png" alt="Sugar">
+                <h3>White Sugar</h3>
+                <p class="product-desc">Pure refined sugar for your daily tea, coffee and sweets.</p>
+                <div class="product-price">₹42 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="product-card">
+                <img src="images/grocery/tea.jpg" alt="Tea Leaves">
+                <h3>Premium Tea Leaves</h3>
+                <p class="product-desc">Aromatic Assam tea leaves for strong flavorful chai.</p>
+                <div class="product-price">₹200 / 250g</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="product-card">
+                <img src="images/grocery/coffee.png" alt="Coffee Powder">
+                <h3>Instant Coffee Powder</h3>
+                <p class="product-desc">Rich and smooth instant coffee for your morning boost.</p>
+                <div class="product-price">₹180 / 200g</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 7 -->
+            <div class="product-card">
+                <img src="images/grocery/biscuits.png" alt="Biscuits">
+                <h3>Marie Biscuits</h3>
+                <p class="product-desc">Light and crispy tea biscuits, perfect with your evening tea.</p>
+                <div class="product-price">₹35 / pack</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 8 -->
+            <div class="product-card">
+                <img src="images/grocery/noodles.png" alt="Instant Noodles">
+                <h3>Instant Noodles</h3>
+                <p class="product-desc">Quick and tasty noodles ready in just 2 minutes.</p>
+                <div class="product-price">₹15 / pack</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 9 -->
+            <div class="product-card">
+                <img src="images/grocery/oil.png" alt="Sunflower Oil">
+                <h3>Sunflower Oil</h3>
+                <p class="product-desc">Light and healthy cooking oil with high smoke point.</p>
+                <div class="product-price">₹160 / liter</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 10 -->
+            <div class="product-card">
+                <img src="images/grocery/salt.png" alt="Iodized Salt">
+                <h3>Iodized Salt</h3>
+                <p class="product-desc">Fine iodized salt for all your cooking needs.</p>
+                <div class="product-price">₹20 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 11 -->
+            <div class="product-card">
+                <img src="images/grocery/milk-powder.png" alt="Milk Powder">
+                <h3>Milk Powder</h3>
+                <p class="product-desc">Full cream milk powder for baking and beverages.</p>
+                <div class="product-price">₹250 / 500g</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 12 -->
+            <div class="product-card">
+                <img src="images/grocery/honey.png" alt="Pure Honey">
+                <h3>Pure Honey</h3>
+                <p class="product-desc">Natural raw honey with all its health benefits.</p>
+                <div class="product-price">₹350 / 500g</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+        </div>
+        
+
+        
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Skanda Fruits</h3>
+                <p>Fresh, organic produce delivered straight to your door.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="allitem.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="copyright">
+            &copy; 2023 Skanda Fruits. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Floating Fruits -->
+    <div class="fruit-decoration apple">🍎</div>
+    <div class="fruit-decoration banana">🍌</div>
+    <div class="fruit-decoration grapes">🍇</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize cart if it doesn't exist
+            if (!localStorage.getItem('cart')) {
+                localStorage.setItem('cart', JSON.stringify([]));
+            }
+
+            // Show notification
+            function showNotification(message) {
+                const notification = document.getElementById('notification');
+                notification.textContent = message;
+                notification.style.display = 'block';
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 3000);
+            }
+
+            // Update cart count in header
+            function updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('cart'));
+                const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+                document.querySelector('.cart-link').textContent = `Cart (${totalItems})`;
+            }
+
+            // Add to cart functionality
+            const addToCartButtons = document.querySelectorAll('.btn');
+            
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productCard = this.closest('.product-card');
+                    const productName = productCard.querySelector('h3').textContent;
+                    const productPrice = productCard.querySelector('.product-price').textContent;
+                    const productImg = productCard.querySelector('img').src;
+                    const priceValue = parseFloat(productPrice.replace(/[^0-9.]/g, ''));
+
+                    // Get current cart
+                    const cart = JSON.parse(localStorage.getItem('cart'));
+                    
+                    // Check if item already exists in cart
+                    const existingItem = cart.find(item => item.name === productName);
+                    
+                    if (existingItem) {
+                        existingItem.quantity += 1;
+                        showNotification(`${productName} quantity increased in cart!`);
+                    } else {
+                        cart.push({
+                            name: productName,
+                            price: priceValue,
+                            priceText: productPrice,
+                            image: productImg,
+                            quantity: 1
+                        });
+                        showNotification(`${productName} added to cart!`);
+                    }
+                    
+                    // Save updated cart
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    
+                    // Update cart count
+                    updateCartCount();
+                });
+            });
+
+            // Initialize cart count on page load
+            updateCartCount();
+        });
+    </script>
+</body>
+</html>

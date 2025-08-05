@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Skanda Fruits</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Cart-specific styles */
+        .cart-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .cart-items {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .order-summary {
+            flex: 1;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            align-items: center;
+        }
+
+        .cart-item-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .cart-item-details {
+            flex-grow: 1;
+        }
+
+        .cart-item-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .cart-item-price {
+            color: #4CAF50;
+            font-weight: 600;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .quantity-btn {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ddd;
+            background: #f5f5f5;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quantity-input {
+            width: 40px;
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        .remove-item {
+            color: #ff5252;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .order-summary h3 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .summary-total {
+            font-weight: 700;
+            font-size: 18px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .checkout-btn:hover {
+            background: #45a049;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 50px 0;
+            width: 100%;
+        }
+
+        .empty-cart img {
+            width: 150px;
+            opacity: 0.7;
+            margin-bottom: 20px;
+        }
+
+        .continue-shopping {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .cart-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="headnav">
+            <div class="brand-name">Skanda Fruits</div>
+            <div class="tagline">Fresh Fruits & Vegetables Delivered to Your Doorstep</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="product/product.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html" class="cart-link">Cart (0)</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Cart Content -->
+    <main class="cart-container">
+        <div class="cart-items">
+            <h2>Your Shopping Cart</h2>
+            
+            <!-- Cart Items List -->
+            <div id="cart-items-list">
+                <!-- Items will be dynamically inserted here -->
+            </div>
+
+            <!-- Empty Cart State (hidden by default) -->
+            <div id="empty-cart" class="empty-cart" style="display: none;">
+                <img src="images/empty-cart.png" alt="Empty Cart">
+                <h3>Your cart is empty</h3>
+                <p>Looks like you haven't added anything to your cart yet</p>
+                <a href="product/allitem.html" class="continue-shopping">Continue Shopping</a>
+            </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <div class="summary-row">
+                <span>Subtotal (<span id="item-count">0</span> items)</span>
+                <span id="subtotal">₹0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Delivery Charges</span>
+                <span>₹50.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Taxes (12%)</span>
+                <span id="taxes">₹0.00</span>
+            </div>
+            <div class="summary-row summary-total">
+                <span>Total</span>
+                <span id="total">₹50.00</span>
+            </div>
+            <a href="checkout.html"><button  class="checkout-btn">Proceed to Checkout</button></a>
+            <p style="text-align: center; margin-top: 10px; font-size: 14px;">
+                <img src="images/secure-payment.png" alt="Secure Payment" style="height: 20px; vertical-align: middle;">
+                <span style="vertical-align: middle;">Secure Payment</span>
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Skanda Fruits</h3>
+                <p>Fresh, organic produce delivered straight to your door.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product/allitem.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>123 Fruit Lane<br>Farmville, CA 12345</p>
+                <p>contact@skandafruits.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 Skanda Fruits. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Floating Fruits -->
+    <div class="fruit-decoration apple">🍎</div>
+    <div class="fruit-decoration banana">🍌</div>
+    <div class="fruit-decoration grapes">🍇</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get cart from localStorage
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsList = document.getElementById('cart-items-list');
+            const emptyCartDiv = document.getElementById('empty-cart');
+            
+            // Render cart items
+            function renderCartItems() {
+                cartItemsList.innerHTML = '';
+                
+                if (cart.length === 0) {
+                    cartItemsList.style.display = 'none';
+                    emptyCartDiv.style.display = 'block';
+                    updateCartTotals();
+                    return;
+                }
+                
+                cartItemsList.style.display = 'block';
+                emptyCartDiv.style.display = 'none';
+                
+                cart.forEach((item, index) => {
+                    const cartItem = document.createElement('div');
+                    cartItem.className = 'cart-item';
+                    cartItem.innerHTML = `
+                        <img src="${item.image}" alt="${item.name}" class="cart-item-img">
+                        <div class="cart-item-details">
+                            <h3 class="cart-item-title">${item.name}</h3>
+                            <div class="cart-item-price">${item.priceText}</div>
+                            <div class="quantity-control">
+                                <button class="quantity-btn minus" data-index="${index}">-</button>
+                                <input type="number" class="quantity-input" value="${item.quantity}" min="1" data-index="${index}">
+                                <button class="quantity-btn plus" data-index="${index}">+</button>
+                            </div>
+                            <div class="remove-item" data-index="${index}">
+                                <span>🗑️ Remove</span>
+                            </div>
+                        </div>
+                        <div class="cart-item-total">₹${(item.price * item.quantity).toFixed(2)}</div>
+                    `;
+                    cartItemsList.appendChild(cartItem);
+                });
+                
+                updateCartTotals();
+                setupCartEventListeners();
+            }
+            
+            // Update cart totals
+            function updateCartTotals() {
+                let subtotal = 0;
+                const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+                
+                cart.forEach(item => {
+                    subtotal += item.price * item.quantity;
+                });
+                
+                const delivery = 50;
+                const tax = subtotal * 0.12; // 12% tax
+                const total = subtotal + delivery + tax;
+                
+                document.getElementById('item-count').textContent = itemCount;
+                document.getElementById('subtotal').textContent = `₹${subtotal.toFixed(2)}`;
+                document.getElementById('taxes').textContent = `₹${tax.toFixed(2)}`;
+                document.getElementById('total').textContent = `₹${total.toFixed(2)}`;
+                
+                // Update cart count in header
+                document.querySelector('.cart-link').textContent = `Cart (${itemCount})`;
+            }
+            
+            // Setup event listeners for cart controls
+            function setupCartEventListeners() {
+                // Minus buttons
+                document.querySelectorAll('.quantity-btn.minus').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const index = parseInt(this.getAttribute('data-index'));
+                        updateCartItemQuantity(index, -1);
+                    });
+                });
+                
+                // Plus buttons
+                document.querySelectorAll('.quantity-btn.plus').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const index = parseInt(this.getAttribute('data-index'));
+                        updateCartItemQuantity(index, 1);
+                    });
+                });
+                
+                // Quantity inputs
+                document.querySelectorAll('.quantity-input').forEach(input => {
+                    input.addEventListener('change', function() {
+                        const index = parseInt(this.getAttribute('data-index'));
+                        const newQuantity = parseInt(this.value) || 1;
+                        updateCartItemQuantity(index, 0, newQuantity);
+                    });
+                });
+                
+                // Remove buttons
+                document.querySelectorAll('.remove-item').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const index = parseInt(this.getAttribute('data-index'));
+                        removeCartItem(index);
+                    });
+                });
+            }
+            
+            // Update item quantity in cart
+            function updateCartItemQuantity(index, change, newQuantity = null) {
+                if (newQuantity !== null) {
+                    cart[index].quantity = Math.max(1, newQuantity);
+                } else {
+                    cart[index].quantity = Math.max(1, cart[index].quantity + change);
+                }
+                
+                // If quantity becomes 0, remove the item
+                if (cart[index].quantity < 1) {
+                    removeCartItem(index);
+                    return;
+                }
+                
+                localStorage.setItem('cart', JSON.stringify(cart));
+                renderCartItems();
+            }
+            
+            // Remove item from cart
+            function removeCartItem(index) {
+                cart.splice(index, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                renderCartItems();
+            }
+            
+            // Initialize cart
+            renderCartItems();
+        });
+    </script>
+</body>
+</html>

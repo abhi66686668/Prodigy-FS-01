@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skanda Fruits - Our Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Add some basic styling for the notification */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="headnav">
+            <div class="brand-name">Skanda Fruits</div>
+            <div class="tagline">Fresh Fruits & Vegetables Delivered to Your Doorstep</div>
+            <nav>
+                <a href="\index.html">Home</a>
+                <a href="allitem.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="\cart.html" class="cart-link">Cart (0)</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="products-page">
+        <h1>Our Organic Products</h1>
+        
+        <div class="category-filter">
+            <h2>All Products</h2>
+            <div class="filter-options">
+                <a href="allitem.html"><button class="filter-btn active">All</button></a>
+                <a href="veg.html"><button class="filter-btn">Vegetables</button></a>
+                <a href="friute.html"><button class="filter-btn">Fruits</button></a>
+                <button class="filter-btn">Dry Fruits</button>
+                <button class="filter-btn">Exotic</button>
+            </div>
+        </div>
+
+        <div class="products-grid four-column">
+            <!-- Product Cards (same as before) -->
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <img src="images/applegava.jpg" alt="Apple Guava">
+                <h3>Apple Guava</h3>
+                <p class="product-desc">Sweet and fragrant guava with pink flesh, rich in vitamin C.</p>
+                <div class="product-price">₹120 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <img src="images/indianapple.jpg" alt="Shimla Apple">
+                <h3>Shimla Apple</h3>
+                <p class="product-desc">Crisp and juicy Himalayan apples, grown in organic orchards.</p>
+                <div class="product-price">₹180 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <img src="images/orange.jpg" alt="Nagpur Orange">
+                <h3>Nagpur Orange</h3>
+                <p class="product-desc">Juicy and sweet oranges from Nagpur, packed with vitamin C.</p>
+                <div class="product-price">₹80 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <img src="images/graps.jpg" alt="Kinnow Mandarin">
+                <h3>Kinnow Mandarin</h3>
+                <p class="product-desc">Sweet and seedless mandarins from Punjab's finest farms.</p>
+                <div class="product-price">₹90 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="product-card">
+                <img src="images/grapesbox.jpg" alt="Thompson Grapes">
+                <h3>Thompson Grapes</h3>
+                <p class="product-desc">Seedless green grapes with perfect sweetness and crunch.</p>
+                <div class="product-price">₹150 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="product-card">
+                <img src="images/banana.jpg" alt="Robusta Banana">
+                <h3>Robusta Banana</h3>
+                <p class="product-desc">Naturally ripened bananas, rich in potassium and energy.</p>
+                <div class="product-price">₹50 / dozen</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 7 -->
+            <div class="product-card">
+                <img src="images/kiwi.jpg" alt="Kiwi Fruit">
+                <h3>Zirakpur Kiwi</h3>
+                <p class="product-desc">Fresh kiwis from Himachal with perfect tart-sweet balance.</p>
+                <div class="product-price">₹200 / dozen</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 8 -->
+            <div class="product-card">
+                <img src="images/straberry.jpg" alt="Maharashtra Strawberries">
+                <h3>Maharashtra Strawberries</h3>
+                <p class="product-desc">Sweet and juicy strawberries from Mahabaleshwar farms.</p>
+                <div class="product-price">₹250 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 9 -->
+            <div class="product-card">
+                <img src="images/watermelon.jpg" alt="Sugar Baby Watermelon">
+                <h3>Sugar Baby Watermelon</h3>
+                <p class="product-desc">Sweet, seedless mini watermelons perfect for Indian summers.</p>
+                <div class="product-price">₹40 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 10 -->
+            <div class="product-card">
+                <img src="images/mango.jpg" alt="Alphonso Mango">
+                <h3>Alphonso Mango</h3>
+                <p class="product-desc">The king of fruits from Ratnagiri, sweet and fiberless.</p>
+                <div class="product-price">₹600 / dozen</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 11 -->
+            <div class="product-card">
+                <img src="images/pomegranate.jpg" alt="Bhagwa Pomegranate">
+                <h3>Bhagwa Pomegranate</h3>
+                <p class="product-desc">Deep red, juicy arils from Maharashtra's finest orchards.</p>
+                <div class="product-price">₹140 / kg</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 12 -->
+            <div class="product-card">
+                <img src="images/pineapple.jpg" alt="Kew Pineapple">
+                <h3>Kew Pineapple</h3>
+                <p class="product-desc">Sweet and tangy pineapples from Northeast India.</p>
+                <div class="product-price">₹70 / piece</div>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Skanda Fruits</h3>
+                <p>Fresh, organic produce delivered straight to your door.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>123 Fruit Lane<br>Farmville, CA 12345</p>
+                <p>contact@skandafruits.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 Skanda Fruits. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Floating Fruits -->
+    <div class="fruit-decoration apple">🍎</div>
+    <div class="fruit-decoration banana">🍌</div>
+    <div class="fruit-decoration grapes">🍇</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize cart if it doesn't exist
+            if (!localStorage.getItem('cart')) {
+                localStorage.setItem('cart', JSON.stringify([]));
+            }
+
+            // Show notification
+            function showNotification(message) {
+                const notification = document.getElementById('notification');
+                notification.textContent = message;
+                notification.style.display = 'block';
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 3000);
+            }
+
+            // Update cart count in header
+            function updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('cart'));
+                const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+                document.querySelector('.cart-link').textContent = `Cart (${totalItems})`;
+            }
+
+            // Add to cart functionality
+            const addToCartButtons = document.querySelectorAll('.btn');
+            
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productCard = this.closest('.product-card');
+                    const productName = productCard.querySelector('h3').textContent;
+                    const productPrice = productCard.querySelector('.product-price').textContent;
+                    const productImg = productCard.querySelector('img').src;
+                    const priceValue = parseFloat(productPrice.replace(/[^0-9.]/g, ''));
+
+                    // Get current cart
+                    const cart = JSON.parse(localStorage.getItem('cart'));
+                    
+                    // Check if item already exists in cart
+                    const existingItem = cart.find(item => item.name === productName);
+                    
+                    if (existingItem) {
+                        existingItem.quantity += 1;
+                        showNotification(`${productName} quantity increased in cart!`);
+                    } else {
+                        cart.push({
+                            name: productName,
+                            price: priceValue,
+                            priceText: productPrice,
+                            image: productImg,
+                            quantity: 1
+                        });
+                        showNotification(`${productName} added to cart!`);
+                    }
+                    
+                    // Save updated cart
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    
+                    // Update cart count
+                    updateCartCount();
+                });
+            });
+
+            // Initialize cart count on page load
+            updateCartCount();
+        });
+    </script>
+</body>
+</html>

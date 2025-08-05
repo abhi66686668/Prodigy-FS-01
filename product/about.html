@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Skanda Grocery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base styles consistent with other pages */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+
+        /* Hero Section with Attractive Background Image */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80') center/cover no-repeat fixed;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Main Content Sections */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #2a7f62;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: #ffd700;
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        /* Our Story Section */
+        .our-story {
+            background: url('https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80') center/cover no-repeat fixed;
+            background-color: rgba(255,255,255,0.9);
+            background-blend-mode: overlay;
+            padding: 100px 0;
+        }
+
+        .story-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            background: rgba(255,255,255,0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .story-text {
+            flex: 1;
+        }
+
+        .story-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .story-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            transition: transform 0.5s;
+        }
+
+        .story-image:hover {
+            transform: scale(1.03);
+        }
+
+        .story-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .story-image:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Founders Section */
+        .founders {
+            padding: 100px 0;
+            background: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') center/cover no-repeat fixed;
+            position: relative;
+        }
+
+        .founders:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.9);
+            z-index: 0;
+        }
+
+        .founders .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .founder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .founder-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+        }
+
+        .founder-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .founder-image {
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .founder-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .founder-card:hover .founder-image img {
+            transform: scale(1.1);
+        }
+
+        .founder-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .founder-info h3 {
+            margin: 10px 0 5px;
+            color: #2a7f62;
+            font-size: 1.5rem;
+        }
+
+        .founder-info p.position {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .founder-info p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Updated Reviews Section with Navigation Controls */
+        .reviews {
+            background: url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') center/cover no-repeat fixed;
+            background-color: rgba(42, 127, 98, 0.9);
+            background-blend-mode: overlay;
+            padding: 100px 0;
+            color: white;
+            position: relative;
+        }
+
+        .review-container {
+            width: 100%;
+            overflow-x: auto;
+            padding-bottom: 20px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .review-grid {
+            display: flex;
+            gap: 30px;
+            padding: 20px 10px;
+            width: max-content;
+        }
+
+        .review-card {
+            background: rgba(255,255,255,0.9);
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            color: #333;
+            transition: all 0.4s ease;
+            min-width: 350px;
+            flex-shrink: 0;
+        }
+
+        .review-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .review-card:before {
+            content: '"';
+            font-size: 100px;
+            color: #2a7f62;
+            opacity: 0.1;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .review-text {
+            margin-bottom: 25px;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .reviewer {
+            display: flex;
+            align-items: center;
+        }
+
+        .reviewer-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+            border: 3px solid #2a7f62;
+        }
+
+        .reviewer-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .reviewer-info h4 {
+            margin: 0 0 5px;
+            color: #2a7f62;
+            font-size: 1.2rem;
+        }
+
+        .reviewer-info p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .rating {
+            color: #ffd700;
+            margin-top: 5px;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation Controls */
+        .review-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .review-nav button {
+            background: white;
+            color: #2a7f62;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .review-nav button:hover {
+            background: #ffd700;
+            transform: scale(1.1);
+        }
+
+        .review-nav button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .review-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .review-container {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 80px 0;
+            background: #2a7f62;
+            color: white;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            padding: 30px;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+            color: #ffd700;
+        }
+
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: #ffd700;
+        }
+
+        .footer-section p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 15px;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .footer-section ul li a:hover {
+            color: #ffd700;
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            background: #333;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #ffd700;
+            color: #2a7f62;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero p {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: auto;
+                padding: 100px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .story-content {
+                flex-direction: column;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .founder-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .review-card {
+                min-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 60px 20px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .review-card {
+                min-width: 280px;
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Skanda Grocery</h1>
+            <p>Where quality meets convenience in every grocery item</p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="our-story">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="story-content">
+                <div class="story-text">
+                    <p>Founded in 2010, Skanda Grocery began as a small neighborhood store with a simple mission: to provide fresh, high-quality groceries at fair prices. What started as a single storefront has grown into a beloved local chain serving thousands of happy customers across the region.</p>
+                    <p>Our commitment to quality, customer service, and community values has remained unchanged. We work directly with local farmers and trusted suppliers to bring you the best products while supporting our local economy.</p>
+                    <p>Today, we're proud to offer both in-store shopping and convenient online delivery, making it easier than ever for our customers to access fresh, wholesome groceries.</p>
+                </div>
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Skanda Grocery Store Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">By The Numbers</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">12+</div>
+                    <div class="stat-label">Years in Business</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Local Suppliers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Delivery Service</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders Section -->
+    <section class="founders">
+        <div class="container">
+            <h2 class="section-title">Meet Our Founders</h2>
+            <div class="founder-grid">
+                <!-- Founder 1 -->
+                <div class="founder-card">
+                    <div class="founder-image">
+                        <img src="images/pepoles/abhi.jpg" alt="Rajesh Kumar">
+                    </div>
+                    <div class="founder-info">
+                        <h3>Abhishek Kumar</h3>
+                        <p class="position">Founder</p>
+                        <p>With over 20 years in the grocery business, Rajesh brings unparalleled expertise in sourcing and quality control. His vision drives our commitment to excellence.</p>
+                    </div>
+                </div>
+
+                <!-- Founder 2 -->
+                <div class="founder-card">
+                    <div class="founder-image">
+                        <img src="images/pepoles/brijesh.jpg" alt="Priya Sharma">
+                    </div>
+                    <div class="founder-info">
+                        <h3>Brijesh</h3>
+                        <p class="position">Co-Founder & COO</p>
+                        <p>Priya's passion for customer service and community building has been instrumental in our growth. She ensures every customer feels valued.</p>
+                    </div>
+                </div>
+
+                <!-- Founder 3 -->
+                <div class="founder-card">
+                    <div class="founder-image">
+                        <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Arun Patel">
+                    </div>
+                    <div class="founder-info">
+                        <h3>Arun Patel</h3>
+                        <p class="position">Co-Founder & CFO</p>
+                        <p>Arun's financial acumen and strategic vision have guided our sustainable expansion while maintaining our core values.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updated Reviews Section with Navigation Controls -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Customer Love</h2>
+            <div class="review-container" id="reviewContainer">
+                <div class="review-grid">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="review-text">
+                            <p>Skanda Grocery has completely changed how I shop. Their quality is consistently excellent, and delivery is always on time. I especially love their fresh produce section - it's like shopping at a farmer's market!</p>
+                        </div>
+                        <div class="reviewer">
+                            <div class="reviewer-image">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ananya Gupta">
+                            </div>
+                            <div class="reviewer-info">
+                                <h4>Ananya Gupta</h4>
+                                <p>Regular Customer</p>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="review-text">
+                            <p>As a working mom, I don't have time to shop. Skanda's online ordering is a lifesaver! Their prices are competitive, and groceries always arrive fresh and well-packed. The personal touch in their service makes all the difference.</p>
+                        </div>
+                        <div class="reviewer">
+                            <div class="reviewer-image">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Vikram Singh">
+                            </div>
+                            <div class="reviewer-info">
+                                <h4>Vikram Singh</h4>
+                                <p>Customer since 2015</p>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="review-text">
+                            <p>What sets Skanda apart is their customer service. When I had an issue with an order, they resolved it immediately and went above and beyond to make it right. That's rare these days! I'm a customer for life.</p>
+                        </div>
+                        <div class="reviewer">
+                            <div class="reviewer-image">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Meera Iyer">
+                            </div>
+                            <div class="reviewer-info">
+                                <h4>Meera Iyer</h4>
+                                <p>Local Resident</p>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="review-card">
+                        <div class="review-text">
+                            <p>The variety of organic products at Skanda is unmatched. I can find everything I need for my family's healthy lifestyle in one place. Their staff is knowledgeable and always helpful.</p>
+                        </div>
+                        <div class="reviewer">
+                            <div class="reviewer-image">
+                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Rahul Mehta">
+                            </div>
+                            <div class="reviewer-info">
+                                <h4>Rahul Mehta</h4>
+                                <p>Health Enthusiast</p>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="review-card">
+                        <div class="review-text">
+                            <p>I've been shopping at Skanda for years. Their loyalty program is fantastic, and I love the weekly specials. The store is always clean and well-organized, making shopping a pleasure.</p>
+                        </div>
+                        <div class="reviewer">
+                            <div class="reviewer-image">
+                                <img src="https://randomuser.me/api/portraits/women/25.jpg" alt="Sunita Reddy">
+                            </div>
+                            <div class="reviewer-info">
+                                <h4>Sunita Reddy</h4>
+                                <p>Loyal Customer</p>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 6 -->
+                    <div class="review-card">
+                        <div class="review-text">
+                            <p>Their delivery service is lightning fast! I often place orders in the morning and get them by afternoon. The produce is always fresh, and they never substitute without asking first.</p>
+                        </div>
+                        <div class="reviewer">
+                            <div class="reviewer-image">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Aditya Joshi">
+                            </div>
+                            <div class="reviewer-info">
+                                <h4>Aditya Joshi</h4>
+                                <p>Busy Professional</p>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 7 -->
+                    <div class="review-card">
+                        <div class="review-text">
+                            <p>Skanda's international food section is amazing! I can find ingredients from my home country that no other store carries. It's like a little taste of home.</p>
+                        </div>
+                        <div class="reviewer">
+                            <div class="reviewer-image">
+                                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Lina Chen">
+                            </div>
+                            <div class="reviewer-info">
+                                <h4>Lina Chen</h4>
+                                <p>Expat Customer</p>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 8 -->
+                    <div class="review-card">
+                        <div class="review-text">
+                            <p>The staff remembers my name and my usual purchases. It's this personal touch that keeps me coming back. Plus, their bakery items are to die for!</p>
+                        </div>
+                        <div class="reviewer">
+                            <div class="reviewer-image">
+                                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Sanjay Verma">
+                            </div>
+                            <div class="reviewer-info">
+                                <h4>Sanjay Verma</h4>
+                                <p>Neighborhood Resident</p>
+                                <div class="rating">★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-nav">
+                <button id="prevBtn" aria-label="Previous review"><i class="fas fa-chevron-left"></i></button>
+                <button id="nextBtn" aria-label="Next review"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Skanda</h3>
+                <p>Your trusted local grocery store committed to quality, freshness, and exceptional service since 2010.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Grocery Lane, Cityville, CA 12345</p>
+                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> contact@skandagrocery.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Sun: 7:00 AM - 10:00 PM</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 Skanda Grocery. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <!-- JavaScript for Review Navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const reviewContainer = document.getElementById('reviewContainer');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const reviewCards = document.querySelectorAll('.review-card');
+            const cardWidth = reviewCards[0].offsetWidth + 30; // width + gap
+            
+            // Calculate total scrollable width
+            const totalWidth = reviewCards.length * cardWidth;
+            
+            // Set initial scroll position
+            let scrollPosition = 0;
+            
+            // Update button states
+            function updateButtons() {
+                prevBtn.disabled = scrollPosition <= 0;
+                nextBtn.disabled = scrollPosition >= totalWidth - reviewContainer.offsetWidth;
+            }
+            
+            // Navigation button click handlers
+            prevBtn.addEventListener('click', function() {
+                scrollPosition = Math.max(0, scrollPosition - cardWidth * 2);
+                reviewContainer.scrollTo({
+                    left: scrollPosition,
+                    behavior: 'smooth'
+                });
+            });
+            
+            nextBtn.addEventListener('click', function() {
+                scrollPosition = Math.min(totalWidth - reviewContainer.offsetWidth, scrollPosition + cardWidth * 2);
+                reviewContainer.scrollTo({
+                    left: scrollPosition,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Update buttons on scroll
+            reviewContainer.addEventListener('scroll', function() {
+                scrollPosition = reviewContainer.scrollLeft;
+                updateButtons();
+            });
+            
+            // Initialize button states
+            updateButtons();
+            
+            // Handle touch events for mobile swipe
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            reviewContainer.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            reviewContainer.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                if (touchEndX < touchStartX - 50) { // Swipe left
+                    nextBtn.click();
+                } else if (touchEndX > touchStartX + 50) { // Swipe right
+                    prevBtn.click();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
